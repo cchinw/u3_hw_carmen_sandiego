@@ -77,11 +77,11 @@ SELECT country.name, country.capital, country.localname, city.district FROM coun
 -- Clue #7: She knows we're on to her – her taxi dropped her off at the international airport, and she beat us to
  -- the boarding gates. We have one chance to catch her, we just have to know where she's heading and beat her to the
  -- landing dock HINT:Look at number 8.
-SELECT country.name, country.continent, country.region, city.name, city.population, city.district FROM country JOIN city ON country.code = city.countrycode WHERE city.population IN (91001, 85001, 91000, 85000);
-        name        | continent |     region     |    name     | population | district 
---------------------+-----------+----------------+-------------+------------+----------
- Saudi Arabia       | Asia      | Middle East    | Najran      |      91000 | Najran
- Russian Federation | Europe    | Eastern Europe | Krasnogorsk |      91000 | Moskova
+SELECT country.name, country.continent, country.region, city.name, city.population, city.district FROM country JOIN city ON country.code = city.countrycode WHERE city.population IN (91084);
+     name      |   continent   |    region     |     name     | population |  district  
+---------------+---------------+---------------+--------------+------------+------------
+ United States | North America | North America | Santa Monica |      91084 | California
+(1 row)
 
 -- Clue #8: Lucky for us, she's getting cocky. She left us a note, and I'm sure she thinks she's very clever, but
 -- if we can crack it, we can finally put her where she belongs – behind bars.
@@ -100,4 +100,4 @@ SELECT country.name, country.continent, country.region, city.name, city.populati
 
 
 
--- She's in the Middle East, in the city of Najran in Saudi Arabia. It won't be Russia because its cold in Russia, but 'a little more sunshine with my slice of life' sounds like Saudi Arabia! Kinda hope we don't catch her though.
+-- She was in America all along! SMH!
